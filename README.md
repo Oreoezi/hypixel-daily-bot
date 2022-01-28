@@ -5,6 +5,12 @@ What it does:
  - Collects daily rewards
  - Collects site rewards
 
+# Beginner Guide
+
+You will need node.js in order to use this script. You can download it <a href="https://nodejs.org/en/">here</a>.<br>
+After you download the repository you can install the dependencies by running ``npm install`` in cmd/powershell/terminal.
+After that it's as simple as running ``node index.js``.
+
 # Installation
 
 Rename ``config.json.example`` to ``config.json`` and edit the ``username`` and ``password`` variables to your credentials. If you have a Microsoft account change the ``auth`` variable to ``microsoft``. Leave the rest untouched.
