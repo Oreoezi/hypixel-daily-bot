@@ -26,7 +26,7 @@ The bot will try to connect and walk straight and to the left towards the Delive
 
 ## Will I get banned for this?
 <br>
-Short answer? No. The bot is using [mineflayer](https://github.com/PrismarineJS/mineflayer) which, although is overkill for this task, is very similar to a normal player and Watchdog is way too oblivious to detect anything regardless. The web part is handled by [puppeteer](https://github.com/puppeteer/puppeteer) which, again, is overkill but very safe in terms of any antibot checks that might get added in the future.
+Short answer? No. The bot is using <a href="github.com/PrismarineJS/mineflayer">mineflayer</a> which, although is overkill for this task, is very similar to a normal player and Watchdog is way too oblivious to detect anything regardless. The web part is handled by <a href="https://github.com/puppeteer/puppeteer">puppeteer</a> which, again, is overkill but very safe in terms of any antibot checks that might get added in the future.
 <br><br>
 
 ## How can I make the script run everyday?
