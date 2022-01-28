@@ -1,0 +1,13 @@
+{
+    "username": "oreoezi",
+    "password": "IListenToBigTimeRush1234",
+    "auth": "mojang",
+    "hasPremium": false,
+    "elements": {
+        "play": "#React-App > div > div:nth-child(2) > div > div > div:nth-child(2) > div:nth-child(2) > iframe",
+        "skip": "#React-App > div > div:nth-child(2) > div > div > div:nth-child(1) > h2 > button",
+        "card_back": "#React-App > div > div:nth-child(2) > div > div > div:nth-child(4) > div:nth-child($i)",
+        "first_card": "#React-App > div > div:nth-child(2) > div > div > div:nth-child(4) > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(2) > canvas"
+    },
+    "useragent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"
+}
