@@ -38,10 +38,11 @@ bot.once("spawn", () => {
     bot.setControlState("forward", true);
     bot.on("move", handleMove);
 });
-bot.on("windowOpen", (window) => {
+bot.on("windowOpen", async function (window) {
     if (!window.title.includes("The Delivery Man")) return;
+    bot.clickWindow(33, 0, 0); //clickWindow returns a promise that never finishes
+    await new Promise((res,rej) => setTimeout(res, 500));
     bot.clickWindow(31, 0, 0);
-    bot.clickWindow(33, 0, 0);
     console.log("[**] Got daily rewards");
 });
 bot.on("kicked", (kicked) => {
@@ -87,7 +88,7 @@ bot.on("message", async function (message) {
     }
     await new Promise((res,rej) => setTimeout(res, 2000));
     await page.click(config.elements.first_card);
-    console.log("[******] Claimed first card(I have no idea what is good I don't play this shit)");
+    console.log("[******] Claimed first card");
     await new Promise((res,rej) => setTimeout(res, 5000));
     browser.close();
     bot.quit();
