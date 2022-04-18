@@ -9,7 +9,7 @@
   "author": "Oreoezi",
   "license": "ISC",
   "dependencies": {
-    "mineflayer": "^4.1.0",
+    "mineflayer": "^4.3.0",
     "puppeteer": "^13.5.2"
   }
 }
