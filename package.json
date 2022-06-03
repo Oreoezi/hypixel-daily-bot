@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "mineflayer": "^4.3.0",
-    "puppeteer": "^14.2.0"
+    "puppeteer": "^14.2.1"
   }
 }
