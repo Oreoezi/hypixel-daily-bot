@@ -9,39 +9,14 @@ const bot = mineflayer.createBot({
     hideErrors: true,
     auth: config.auth
 });
-var x,z;
-var delivery_man, armor_stand;
-function handleMove() {
-    if (Math.abs(bot.entity.position.x) >= x && Math.abs(bot.entity.position.x) <= x+1) {
-        bot.setControlState("forward", false);
-        bot.setControlState("right", true);
-    }
-    if (Math.abs(bot.entity.position.z) >= z && Math.abs(bot.entity.position.z) <= z+1) {
-        bot.setControlState("right", false);
-        bot.useOn(delivery_man);
-        bot.useOn(armor_stand);
-        bot.attack(delivery_man);
-        bot.removeListener("move", handleMove);
-    }
-}
 bot.once("spawn", () => {
     console.log("[*] Connected to server");
-    armor_stand = Object.values(bot.entities).find(ent => {
-        if (ent.mobType != "Armor Stand") return false;
-        if (!ent.metadata.find(met => `${met}`.includes("Deliveries!"))) return false;
-        return true;
-    });
-    delivery_man = Object.values(bot.entities).find(ent => ent.type == "player" && ent.position.x == armor_stand.position.x && ent.position.z == armor_stand.position.z);
-    x = Math.abs(armor_stand.position.x);
-    z = Math.abs(armor_stand.position.z);
-    bot.setQuickBarSlot(3);
-    bot.setControlState("forward", true);
-    bot.on("move", handleMove);
+    bot.chat("/delivery");
 });
 bot.on("windowOpen", async function (window) {
     if (!window.title.includes("The Delivery Man")) return;
     bot.clickWindow(33, 0, 0); //clickWindow returns a promise that never finishes
-    await new Promise((res,rej) => setTimeout(res, 500));
+    await new Promise((res,rej) => setTimeout(res, 1000));
     bot.clickWindow(31, 0, 0);
     console.log("[**] Got daily rewards");
 });
